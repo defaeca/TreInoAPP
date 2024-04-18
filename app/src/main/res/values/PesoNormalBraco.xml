@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="Normal_Braco">
+        <item>Rosca</item>
+        <item>Rosca2</item>
+        <item>Rosca4</item>
+        <item>Rosca6</item>
+        <item>Rosca32</item>
+    </string-array>
+</resources>

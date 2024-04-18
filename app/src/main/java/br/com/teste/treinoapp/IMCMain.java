@@ -21,8 +21,8 @@ public class IMCMain extends AppCompatActivity {
         tResultado = findViewById(R.id.tResultado);
     }
     public void somas (View view){
-        float valor1 = Integer.parseInt(etPeso.getText().toString());
-        float valor2 = Integer.parseInt(etAltura.getText().toString());
+        float valor1 = Float.parseFloat(etPeso.getText().toString());
+        float valor2 = Float.parseFloat(etAltura.getText().toString());
         float Resultado = valor1/(valor2*valor2);
         String resultadoCalculoFinal = String.valueOf(Resultado);
         tResultado.setText(resultadoCalculoFinal);

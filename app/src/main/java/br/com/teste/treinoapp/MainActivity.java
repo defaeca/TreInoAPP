@@ -33,6 +33,12 @@ public class MainActivity extends AppCompatActivity {
                         .show();
 
             }
+
         });
     }
+    public void onClick(View v) {
+        Intent intent = new Intent(MainActivity.this, PesoNormalMain.class);
+        startActivity(intent);
+    }
 }
+

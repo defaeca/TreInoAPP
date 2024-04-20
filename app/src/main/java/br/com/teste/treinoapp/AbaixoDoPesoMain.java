@@ -1,4 +1,4 @@
 package br.com.teste.treinoapp;
 
-public class AbaixoDoPessoMain {
+public class AbaixoDoPesoMain {
 }

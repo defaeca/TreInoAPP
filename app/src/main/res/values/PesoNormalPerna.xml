@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="Normal_Perna">
+        <item>ExercicioPerna1</item>
+        <item>ExercicioPerna2</item>
+        <item>ExercicioPerna3</item>
+        <item>ExercicioPerna4</item>
+        <item>ExercicioPerna5</item>
+    </string-array>
+</resources>

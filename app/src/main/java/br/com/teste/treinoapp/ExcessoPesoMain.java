@@ -11,7 +11,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class PesoNormalMain extends AppCompatActivity {
+public class ExcessoPesoMain extends AppCompatActivity{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,56 +24,53 @@ public class PesoNormalMain extends AppCompatActivity {
             return insets;
         });
 
-        initPesoNormalBraco();
-        initPesoNormalPerna();
-        initPesoNormalCostas();
-        initPesoNormalPeito();
-        initPesoNormalOmbro();
+        initExcessoPesoBraco();
+        initExcessoPesoPerna();
+        initExcessoPesoCostas();
+        initExcessoPesoPeito();
+        initExcessoPesoOmbro();
 
 
     }
 
-    private void initPesoNormalBraco() {
+    private void initExcessoPesoBraco() {
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-                R.array.Normal_Braco, android.R.layout.simple_list_item_checked);
-        ListView listView = findViewById(R.id.listViewBracoNormal);
+                R.array.Excesso_Braco, android.R.layout.simple_list_item_checked);
+        ListView listView = findViewById(R.id.listViewExcessoBraco);
         listView.setAdapter(adapter);
         listView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
     }
 
-    private void initPesoNormalPerna() {
+    private void initExcessoPesoPerna()
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-                R.array.Normal_Perna, android.R.layout.simple_list_item_checked);
-        ListView listView = findViewById(R.id.listViewPernaNormal);
+                R.array.Excesso_Perna, android.R.layout.simple_list_item_checked);
+        ListView listView = findViewById(R.id.listViewExcessoPerna);
         listView.setAdapter(adapter);
         listView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
     }
 
-    private void initPesoNormalCostas() {
+    private void initExcessoPesoCostas() {
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-                R.array.Normal_Costas, android.R.layout.simple_list_item_checked);
-        ListView listView = findViewById(R.id.listViewCostasNormal);
+                R.array.Excesso_Costas, android.R.layout.simple_list_item_checked);
+        ListView listView = findViewById(R.id.listViewExcessoCostas);
         listView.setAdapter(adapter);
         listView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
     }
 
-    private void initPesoNormalPeito() {
+    private void initExcessoPesoPeito() {
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-                R.array.Normal_Peito, android.R.layout.simple_list_item_checked);
-        ListView listView = findViewById(R.id.listViewPeitoNormal);
+                R.array.Excesso_Peito, android.R.layout.simple_list_item_checked);
+        ListView listView = findViewById(R.id.listViewExcessoPeito);
         listView.setAdapter(adapter);
         listView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
     }
 
-    private void initPesoNormalOmbro() {
+    private void initExcessoPesoOmbro() {
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-                R.array.Normal_Ombro, android.R.layout.simple_list_item_checked);
-        ListView listView = findViewById(R.id.listViewOmbroNormal);
+                R.array.Excesso_Ombro, android.R.layout.simple_list_item_checked);
+        ListView listView = findViewById(R.id.listViewExcessoOmbro);
         listView.setAdapter(adapter);
         listView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
     }
-
-
-
 
 }

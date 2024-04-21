@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="Excesso_Peito">
+        <item>ExercicioPeito1</item>
+        <item>ExercicioPeito2</item>
+        <item>ExercicioPeito3</item>
+        <item>ExercicioPeito4</item>
+        <item>ExercicioPeito5</item>
+    </string-array>
+</resources>

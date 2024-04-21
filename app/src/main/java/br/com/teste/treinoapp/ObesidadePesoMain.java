@@ -11,64 +11,65 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class ExcessoPesoMain extends AppCompatActivity{
+
+public class ObesidadePesoMain extends AppCompatActivity{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_excesso_peso_main);
+        setContentView(R.layout.activity_obesidade_peso_main);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
 
-        initExcessoPesoBraco();
-        initExcessoPesoPerna();
-        initExcessoPesoCostas();
-        initExcessoPesoPeito();
-        initExcessoPesoOmbro();
+        initObesidadePesoBraco();
+        initObesidadePesoPerna();
+        initObesidadePesoCostas();
+        initObesidadePesoPeito();
+        initObesidadePesoOmbro();
 
 
     }
 
-    private void initExcessoPesoBraco() {
+    private void initObesidadePesoBraco() {
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-                R.array.Excesso_Braco, android.R.layout.simple_list_item_checked);
-        ListView listView = findViewById(R.id.listViewBracoExcesso);
+                R.array.Obesidade_Braco, android.R.layout.simple_list_item_checked);
+        ListView listView = findViewById(R.id.listViewBracoObesidade);
         listView.setAdapter(adapter);
         listView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
     }
 
-    private void initExcessoPesoPerna(){
+    private void initObesidadePesoPerna(){
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-                R.array.Excesso_Perna, android.R.layout.simple_list_item_checked);
-        ListView listView = findViewById(R.id.listViewPernaExcesso);
+                R.array.Obesidade_Perna, android.R.layout.simple_list_item_checked);
+        ListView listView = findViewById(R.id.listViewPernaObesidade);
         listView.setAdapter(adapter);
         listView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
     }
 
-    private void initExcessoPesoCostas() {
+    private void initObesidadePesoCostas() {
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-                R.array.Excesso_Costas, android.R.layout.simple_list_item_checked);
-        ListView listView = findViewById(R.id.listViewCostasExcesso);
+                R.array.Obesidade_Costas, android.R.layout.simple_list_item_checked);
+        ListView listView = findViewById(R.id.listViewCostasObesidade);
         listView.setAdapter(adapter);
         listView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
     }
 
-    private void initExcessoPesoPeito() {
+    private void initObesidadePesoPeito() {
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-                R.array.Excesso_Peito, android.R.layout.simple_list_item_checked);
-        ListView listView = findViewById(R.id.listViewPeitoExcesso);
+                R.array.Obesidade_Peito, android.R.layout.simple_list_item_checked);
+        ListView listView = findViewById(R.id.listViewPeitoObesidade);
         listView.setAdapter(adapter);
         listView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
     }
 
-    private void initExcessoPesoOmbro() {
+    private void initObesidadePesoOmbro() {
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-                R.array.Excesso_Ombro, android.R.layout.simple_list_item_checked);
-        ListView listView = findViewById(R.id.listViewOmbroExcesso);
+                R.array.Obesidade_Ombro, android.R.layout.simple_list_item_checked);
+        ListView listView = findViewById(R.id.listViewOmbroObesidade);
         listView.setAdapter(adapter);
         listView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
     }

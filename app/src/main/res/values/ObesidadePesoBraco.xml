@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="Obesidade_Braco">
+        <item>ExercicioBraco1</item>
+        <item>ExercicioBraco2</item>
+        <item>ExercicioBraco3</item>
+        <item>ExercicioBraco4</item>
+        <item>ExercicioBraco5</item>
+    </string-array>
+</resources>

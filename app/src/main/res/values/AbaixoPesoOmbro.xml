@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="Abaixo_Ombro">
+        <item>ExercicioOmbro1</item>
+        <item>ExercicioOmbro2</item>
+        <item>ExercicioOmbro3</item>
+        <item>ExercicioOmbro4</item>
+        <item>ExercicioOmbro5</item>
+    </string-array>
+</resources>

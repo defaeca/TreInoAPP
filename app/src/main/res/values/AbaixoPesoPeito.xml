@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="Abaixo_Peito">
-        <item>ExercicioPeito1</item>
-        <item>ExercicioPeito2</item>
-        <item>ExercicioPeito3</item>
-        <item>ExercicioPeito4</item>
-        <item>ExercicioPeito5</item>
+        <item>Supino Reto</item>
+        <item>Supino Inclinado com Halteres</item>
+        <item>Crucifixo com Halteres</item>
+        <item>Peck Deck (voador) na máquina</item>
     </string-array>
 </resources>

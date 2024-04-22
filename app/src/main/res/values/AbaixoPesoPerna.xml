@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="Abaixo_Perna">
-        <item>ExercicioPerna1</item>
-        <item>ExercicioPerna2</item>
-        <item>ExercicioPerna3</item>
-        <item>ExercicioPerna4</item>
-        <item>ExercicioPerna5</item>
+        <item>Agachamento Livre</item>
+        <item>Leg Press</item>
+        <item>Cadeira Extensora</item>
+        <item>Flexão de Pernas Deitado</item>
+        <item>Panturrilha no Leg Press</item>
     </string-array>
 </resources>

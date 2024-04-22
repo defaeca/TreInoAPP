@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="Abaixo_Braco">
-        <item>ExercicioBraco1</item>
-        <item>ExercicioBraco2</item>
-        <item>ExercicioBraco3</item>
-        <item>ExercicioBraco4</item>
-        <item>ExercicioBraco5</item>
+        <item>Rosca Direta com Barra Reta</item>
+        <item>Rosca Scott na Máquina ou Banco Inclinado</item>
+        <item>Extensão de Triceps com Barra Reta</item>
+        <item>Triceps francês com halteres (deitado ou inclinado)</item>
     </string-array>
 </resources>

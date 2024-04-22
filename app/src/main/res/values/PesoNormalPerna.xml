@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="Normal_Perna">
-        <item>ExercicioPerna1</item>
-        <item>ExercicioPerna2</item>
-        <item>ExercicioPerna3</item>
-        <item>ExercicioPerna4</item>
-        <item>ExercicioPerna5</item>
+        <item>Agachamento</item>
+        <item>Extensora</item>
+        <item>Leg Press</item>
+        <item>Flexora</item>
+        <item>Panturrilha Donkey</item>
     </string-array>
 </resources>

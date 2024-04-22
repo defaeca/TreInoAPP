@@ -26,19 +26,14 @@ public class MainActivity extends AppCompatActivity {
             if ("Treino".equals(login) && "123456".equals(senha)){
                 Intent intent;
                 intent = new Intent(MainActivity.this, IMCMain.class);
-                startActivities(new Intent[]{intent});
+                startActivity(intent);
+                finish();
             }else{
-                Snackbar.make(v, "Usuario ou Senha incorreta.", Snackbar.LENGTH_INDEFINITE)
-                        .setAction("Action", null)
+                Snackbar.make(v, "Usuario ou Senha incorreta.", Snackbar.LENGTH_LONG)
                         .show();
-
             }
-
         });
     }
-    public void onClick(View v) {
-        Intent intent = new Intent(MainActivity.this, ExcessoPesoMain.class);
-        startActivity(intent);
-    }
 }
+
 

@@ -13,7 +13,7 @@ public class ObesidadeExtremaPesoMain  extends  AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_obesidade_peso_main);
+        setContentView(R.layout.activity_obesidade_extrema_peso_main);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.ObesidadeExtremaPesoMain), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);

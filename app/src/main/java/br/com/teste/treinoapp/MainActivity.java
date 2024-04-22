@@ -27,7 +27,6 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent;
                 intent = new Intent(MainActivity.this, IMCMain.class);
                 startActivity(intent);
-                finish();
             }else{
                 Snackbar.make(v, "Usuario ou Senha incorreta.", Snackbar.LENGTH_LONG)
                         .show();

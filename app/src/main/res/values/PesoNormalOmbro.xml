@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="Normal_Ombro">
-        <item>ExercicioOmbro1</item>
-        <item>ExercicioOmbro2</item>
-        <item>ExercicioOmbro3</item>
-        <item>ExercicioOmbro4</item>
-        <item>ExercicioOmbro5</item>
+        <item>Elevalção Lateral</item>
+        <item>Elevação Frontal</item>
+        <item>Arnold Press</item>
+        <item>Remada Alta no Cross</item>
     </string-array>
 </resources>

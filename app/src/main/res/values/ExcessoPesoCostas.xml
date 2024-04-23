@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="Excesso_Costas">
-        <item>ExercicioCostas1</item>
-        <item>ExercicioCostas2</item>
-        <item>ExercicioCostas3</item>
-        <item>ExercicioCostas4</item>
-        <item>ExercicioCostas5</item>
+        <item>Barra fixa ou Puxada na máquina</item>
+        <item>Pulldown na Máquina</item>
+        <item>Pulldown na Polia Alta</item>
+        <item>Remada Sentado na Máquina</item>
     </string-array>
 </resources>

@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="Obesidade_Extrema_Costas">
-        <item>ExercicioCostas1</item>
-        <item>ExercicioCostas2</item>
-        <item>ExercicioCostas3</item>
-        <item>ExercicioCostas4</item>
-        <item>ExercicioCostas5</item>
+        <item>Pulldown na Máquina</item>
+        <item>Remada Sentadao na Máquina</item>
     </string-array>
 </resources>

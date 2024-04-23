@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="Excesso_Perna">
-        <item>ExercicioPerna1</item>
-        <item>ExercicioPerna2</item>
-        <item>ExercicioPerna3</item>
-        <item>ExercicioPerna4</item>
-        <item>ExercicioPerna5</item>
+        <item>Agachamento no Smith Machine</item>
+        <item>Leg Press na Máquina</item>
+        <item>Extensão de Pernas na Máquina</item>
+        <item>Flexão de Pernas Deitado</item>
+        <item>Panturrilha em Pé na Máquina</item>
     </string-array>
 </resources>

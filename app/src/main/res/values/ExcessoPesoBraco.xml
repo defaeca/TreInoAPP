@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="Excesso_Braco">
-        <item>ExercicioBraco1</item>
-        <item>ExercicioBraco2</item>
-        <item>ExercicioBraco3</item>
-        <item>ExercicioBraco4</item>
-        <item>ExercicioBraco5</item>
+        <item>Rosca Biceps com Halteres Sentado</item>
+        <item>Rosca Martelo na Polia Baixa</item>
+        <item>Extensão de Triceps na Polia Alta</item>
+        <item>Triceps Corda na Polia Alta</item>'
     </string-array>
 </resources>

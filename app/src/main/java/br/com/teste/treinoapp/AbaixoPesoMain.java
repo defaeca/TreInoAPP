@@ -38,8 +38,8 @@ public class AbaixoPesoMain extends AppCompatActivity {
 
     private void initAbaixoPesoPerna(){
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-                R.array.Excesso_Perna, android.R.layout.simple_list_item_checked);
-        ListView listView = findViewById(R.id.listViewPernaExcesso);
+                R.array.Abaixo_Perna, android.R.layout.simple_list_item_checked);
+        ListView listView = findViewById(R.id.listViewPernaAbaixo);
         listView.setAdapter(adapter);
         listView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
     }

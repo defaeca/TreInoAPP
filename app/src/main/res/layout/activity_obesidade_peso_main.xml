@@ -4,26 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/ObesidadePesoMain"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <TextView
-        android:id="@+id/textView15"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
-        android:text="Obesidade"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    android:layout_height="match_parent"
+    android:background="@drawable/o">
 
     <TextView
         android:id="@+id/textView16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="100dp"
-        android:text="Braco"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="192dp"
+        android:text="Braço"
+        android:textColor="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -31,9 +22,10 @@
         android:id="@+id/textView17"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:layout_marginEnd="52dp"
+        android:layout_marginTop="192dp"
+        android:layout_marginEnd="140dp"
         android:text="Costas"
+        android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -41,9 +33,10 @@
         android:id="@+id/textView18"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="332dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="372dp"
         android:text="Perna"
+        android:textColor="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -51,9 +44,10 @@
         android:id="@+id/textView19"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="332dp"
-        android:layout_marginEnd="72dp"
+        android:layout_marginTop="372dp"
+        android:layout_marginEnd="152dp"
         android:text="Peito"
+        android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -61,55 +55,64 @@
         android:id="@+id/textView20"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="524dp"
+        android:layout_marginTop="544dp"
         android:text="Ombro"
+        android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintHorizontal_bias="0.198"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ListView
         android:id="@+id/listViewBracoObesidade"
-        android:layout_width="144dp"
-        android:layout_height="157dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="148dp"
+        android:layout_width="160dp"
+        android:layout_height="148dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="208dp"
+        android:background="@drawable/img"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
     <ListView
         android:id="@+id/listViewCostasObesidade"
-        android:layout_width="135dp"
-        android:layout_height="154dp"
-        android:layout_marginTop="148dp"
-        android:layout_marginEnd="16dp"
+        android:layout_width="160dp"
+        android:layout_height="148dp"
+        android:layout_marginTop="208dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/img"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ListView
         android:id="@+id/listViewPernaObesidade"
-        android:layout_width="158dp"
-        android:layout_height="139dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="364dp"
+        android:layout_width="160dp"
+        android:layout_height="148dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="392dp"
+        android:background="@drawable/img"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ListView
         android:id="@+id/listViewPeitoObesidade"
-        android:layout_width="145dp"
-        android:layout_height="134dp"
-        android:layout_marginTop="364dp"
-        android:layout_marginEnd="16dp"
+        android:layout_width="160dp"
+        android:layout_height="148dp"
+        android:layout_marginTop="392dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/img"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ListView
         android:id="@+id/listViewOmbroObesidade"
-        android:layout_width="166dp"
-        android:layout_height="131dp"
-        android:layout_marginTop="572dp"
+        android:layout_width="272dp"
+        android:layout_height="151dp"
+        android:layout_marginTop="564dp"
+        android:background="@drawable/img"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.525"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

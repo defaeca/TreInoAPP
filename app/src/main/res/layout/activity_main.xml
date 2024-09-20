@@ -9,7 +9,7 @@
     tools:context=".MainActivity">
 
     <EditText
-        android:id="@+id/usuario"
+        android:id="@+id/editTextLogin"
         android:layout_width="295dp"
         android:layout_height="52dp"
         android:ems="10"
@@ -27,7 +27,7 @@
         android:layout_width="294dp"
         android:layout_height="49dp"
         android:backgroundTint="#FF0000"
-        android:onClick="Logar"
+        android:onClick="login"
         android:text="Logar"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -53,15 +53,32 @@
         app:layout_constraintVertical_bias="0.916" />
 
     <EditText
-        android:id="@+id/senha"
-        android:layout_width="295dp"
-        android:layout_height="52dp"
+        android:id="@+id/editTextSenha"
+        android:layout_width="297dp"
+        android:layout_height="56dp"
         android:ems="10"
         android:inputType="text"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.712" />
+        app:layout_constraintVertical_bias="0.724" />
+
+    <EditText
+        android:id="@+id/editTextIpServidor"
+        android:layout_width="155dp"
+        android:layout_height="55dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="10.20.141.44"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.94"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.337" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

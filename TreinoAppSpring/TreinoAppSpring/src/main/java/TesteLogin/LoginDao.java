@@ -1,4 +1,4 @@
-package aps.poo.TreinoAppSpring;
+package TesteLogin;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -16,15 +16,15 @@ public class LoginDao {
 
     public Login incluir(Login l) throws Exception {
         validaLogin(l, true);
+        System.out.println("Tentando inserir: " + l);
 
-        String sqlInsert = "INSERT INTO Login (LOGIN, SENHA, PESO, ALTURA, IMC)"
-                + " VALUES (?, ?, ?, ?, ?)";
+        String sqlInsert = "INSERT INTO Login (NOME, EMAIL, ALTURA, PESO, IMC) VALUES (?, ?, ?, ?, ?)";
         try (Connection con = jdbcTemplate.getDataSource().getConnection();
              PreparedStatement ps = con.prepareStatement(sqlInsert, Statement.RETURN_GENERATED_KEYS)) {
-            ps.setString(1, l.getLogin());
-            ps.setString(2, l.getSenha());
-            ps.setFloat(3, l.getPeso());
-            ps.setFloat(4, l.getAltura());
+            ps.setString(1, l.getNome());
+            ps.setString(2, l.getEmail());
+            ps.setFloat(3, l.getAltura());
+            ps.setFloat(4, l.getPeso());
             ps.setFloat(5, l.getImc());
             int result = ps.executeUpdate();
             if (result == 1) {
@@ -40,36 +40,23 @@ public class LoginDao {
     }
 
     private void validaLogin(Login l, boolean inclusao) throws Exception {
-        if (l.getLogin() == null || l.getLogin().trim().isEmpty()) {
-            throw new Exception("Login é obrigátorio.");
+        if (l.getNome() == null || l.getNome().trim().isEmpty()) {
+            throw new Exception("Nome é obrigatório.");
         }
-        l.setLogin(l.getLogin().trim());
-        if (l.getSenha() == null || l.getSenha().trim().isEmpty()) {
-            throw new Exception("Senha é obrigátoria.");
+        l.setNome(l.getNome().trim());
+        if (l.getEmail() == null || l.getEmail().trim().isEmpty()) {
+            throw new Exception("Email é obrigatório.");
         }
-        l.setSenha(l.getSenha().trim());
+        l.setEmail(l.getEmail().trim());
 
         if (inclusao) {
-            String query = "select * from Login where login = ? ";
+            String query = "select * from Login where email = ?";
             try (Connection con = jdbcTemplate.getDataSource().getConnection();
                  PreparedStatement ps = con.prepareStatement(query)) {
-                ps.setString(1, l.getLogin());
+                ps.setString(1, l.getEmail());
                 try (ResultSet rs = ps.executeQuery()) {
                     if (rs.next()) {
-                        throw new Exception("Login já cadastrado");
-                    }
-                }
-            }
-        } else {
-            String query = "select * from Login where login = ?"
-                    + "and id <> ?";
-            try (Connection con = jdbcTemplate.getDataSource().getConnection();
-                 PreparedStatement ps = con.prepareStatement(query);) {
-                ps.setString(1, l.getLogin());
-                ps.setInt(2, l.getId());
-                try (ResultSet rs = ps.executeQuery()) {
-                    if (rs.next()) {
-                        throw new Exception("Login já cadastrado");
+                        throw new Exception("Email já cadastrado");
                     }
                 }
             }
@@ -77,7 +64,7 @@ public class LoginDao {
     }
 
     public List<Login> listar() throws Exception {
-        String sql = "select id, login, senha, peso, altura, imc from login";
+        String sql = "SELECT id, nome, email, altura, peso, imc FROM login";
         List<Login> lista = new ArrayList<>();
         try (Connection con = jdbcTemplate.getDataSource().getConnection();
              PreparedStatement ps = con.prepareStatement(sql);
@@ -91,15 +78,13 @@ public class LoginDao {
     }
 
     public Login obter(int id) throws Exception {
-        String sql = "SELECT id, login, senha, peso, altura, imc from login "
-                + "where id = ?";
+        String sql = "SELECT id, nome, email, altura, peso, imc FROM login WHERE id = ?";
         try (Connection con = jdbcTemplate.getDataSource().getConnection();
              PreparedStatement ps = con.prepareStatement(sql)) {
             ps.setInt(1, id);
             try (ResultSet rs = ps.executeQuery()) {
                 if (rs.next()) {
-                    Login l = getLogin(rs);
-                    return l;
+                    return getLogin(rs);
                 }
             }
         }
@@ -109,10 +94,10 @@ public class LoginDao {
     private static Login getLogin(ResultSet rs) throws SQLException {
         Login l = new Login();
         l.setId(rs.getInt("id"));
-        l.setLogin(rs.getString("login"));
-        l.setSenha(rs.getString("senha"));
-        l.setPeso(rs.getFloat("peso"));
+        l.setNome(rs.getString("nome"));
+        l.setEmail(rs.getString("email"));
         l.setAltura(rs.getFloat("altura"));
+        l.setPeso(rs.getFloat("peso"));
         l.setImc(rs.getFloat("imc"));
         return l;
     }
@@ -120,14 +105,13 @@ public class LoginDao {
     public Login alterar(Login l) throws Exception {
         validaLogin(l, false);
 
-        String sqlUpdate = "update login set login = ?, senha = ?, peso = ?, altura = ?, imc = ?"
-                + "where id = ?";
+        String sqlUpdate = "UPDATE login SET nome = ?, email = ?, altura = ?, peso = ?, imc = ? WHERE id = ?";
         try (Connection con = jdbcTemplate.getDataSource().getConnection();
-             PreparedStatement ps = con.prepareStatement(sqlUpdate);) {
-            ps.setString(1, l.getLogin());
-            ps.setString(2, l.getSenha());
-            ps.setFloat(3, l.getPeso());
-            ps.setFloat(4, l.getAltura());
+             PreparedStatement ps = con.prepareStatement(sqlUpdate)) {
+            ps.setString(1, l.getNome());
+            ps.setString(2, l.getEmail());
+            ps.setFloat(3, l.getAltura());
+            ps.setFloat(4, l.getPeso());
             ps.setFloat(5, l.getImc());
             ps.setInt(6, l.getId());
             int result = ps.executeUpdate();
@@ -140,16 +124,16 @@ public class LoginDao {
     }
 
     public boolean excluir(int id) throws Exception {
-        String sqlUpdate = "delete from login where ID = ?";
+        String sqlUpdate = "DELETE FROM login WHERE id = ?";
         try (Connection con = jdbcTemplate.getDataSource().getConnection();
-             PreparedStatement ps = con.prepareStatement(sqlUpdate);) {
+             PreparedStatement ps = con.prepareStatement(sqlUpdate)) {
             ps.setInt(1, id);
             int result = ps.executeUpdate();
             if (result == 1) {
-                System.out.println("Login Excluido com sucesso. ");
+                System.out.println("Login excluído com sucesso.");
                 return true;
             }
-            throw new Exception("Erro na exclusão");
+            throw new Exception("Erro na exclusão.");
         }
     }
 }

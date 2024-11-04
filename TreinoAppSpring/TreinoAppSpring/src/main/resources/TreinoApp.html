@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App de treino - Auxílio com IMC</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="container">
+    <section id="insertDataSection">
+        <h1 id="formHeader">Inserir Dados</h1>
+        <form id="insertForm">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="insertName">Nome:</label>
+                    <input type="text" id="insertName" required>
+                </div>
+                <div class="form-group">
+                    <label for="insertEmail">Email:</label>
+                    <input type="email" id="insertEmail" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="insertHeight">Altura (m):</label>
+                    <input type="number" id="insertHeight" step="0.01" required>
+                </div>
+                <div class="form-group">
+                    <label for="insertWeight">Peso (kg):</label>
+                    <input type="number" id="insertWeight" step="0.01" required>
+                </div>
+            </div>
+            <button type="submit" id="submitInsert" class="save">Salvar</button>
+        </form>
+        <div id="insertSuccess">Dados inseridos/atualizados com sucesso!</div>
+    </section>
+
+    <section id="viewDataSection">
+        <h1>Visualizar Dados</h1>
+        <table id="dataTable">
+            <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>IMC</th>
+                <th>Ações</th>
+            </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </section>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,4 +1,4 @@
-package aps.poo.TreinoAppSpring;
+package TesteLogin;
 
 public class Retorno {
     public String status;

@@ -1,4 +1,4 @@
-package aps.poo.TreinoAppSpring;
+package TesteLogin;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

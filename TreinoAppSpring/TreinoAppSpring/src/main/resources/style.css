@@ -1,10 +1,27 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f0f2f5;
     margin: 0;
     padding: 0;
-    color: #333;
+    color: #fff; /* Texto branco */
     line-height: 1.5;
+    height: 100vh; /* Faz o fundo ocupar toda a altura da tela */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000; /* Cor de fallback */
+    overflow: hidden; /* Remove barras de rolagem */
+}
+
+#background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('gym.jpg') no-repeat center center fixed;
+    background-size: cover;
+    filter: blur(5px);
+    z-index: -1; /* Coloca o fundo atrás de todo o conteúdo */
 }
 
 #container {
@@ -14,32 +31,32 @@ body {
     max-width: 600px;
     margin: 20px auto;
     padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: #222; /* Fundo preto */
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1); /* Sombra branca leve */
     border-radius: 10px;
-    border-left: 8px solid #007bff;
+    border-left: 8px solid #ff0000; /* Vermelho */
     transition: transform 0.3s ease, border-color 0.3s ease;
+    z-index: 1; /* Garante que o container fique na frente */
 }
-
 #container:hover {
     transform: translateY(-5px);
-    border-left-color: #0056b3;
+    border-left-color: #b30000; /* Vermelho escuro */
 }
 
 h1 {
-    color: #007bff;
+    color: #ff0000; /* Vermelho */
     text-align: center;
     font-weight: bold;
     margin: 15px 0;
     padding: 0 20px;
     font-size: 2.5em;
-    border-bottom: 2px solid #007bff;
+    border-bottom: 2px solid #ff0000; /* Vermelho */
     display: inline-block;
     padding-bottom: 5px;
 }
 
 h1:hover {
-    color: #0056b3;
+    color: #b30000; /* Vermelho escuro */
 }
 
 .form-row {
@@ -60,6 +77,7 @@ h1:hover {
 label {
     display: block;
     margin-bottom: 5px;
+    color: #fff; /* Branco */
 }
 
 input[type="text"],
@@ -70,6 +88,8 @@ input[type="number"] {
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+    background-color: #333; /* Preto */
+    color: #fff; /* Branco */
 }
 
 button {
@@ -82,7 +102,7 @@ button {
 }
 
 .save {
-    background-color: #28a745;
+    background-color: #28a745; /* Verde */
     color: white;
 }
 
@@ -95,39 +115,40 @@ table {
     max-width: 1000px;
     margin: 20px auto;
     border-collapse: collapse;
-    background-color: #fff;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: #222; /* Preto */
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
     border-radius: 10px;
     overflow: hidden;
-    border: 1px solid #ddd;
+    border: 1px solid #444; /* Cinza escuro */
 }
 
 table th,
 table td {
     padding: 12px 15px;
     text-align: left;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #444; /* Cinza escuro */
     min-width: 100px;
 }
 
 table th {
-    background-color: #007bff;
+    background-color: #ff0000; /* Vermelho */
     color: white;
     font-weight: bold;
     text-align: center;
 }
 
 table th:hover {
-    background-color: #0056b3;
+    background-color: #b30000; /* Vermelho escuro */
 }
 
 table td {
-    background-color: #f9f9f9;
+    background-color: #333; /* Preto */
+    color: white; /* Branco */
     text-align: center;
 }
 
 table tr:hover {
-    background-color: #e7f3ff;
+    background-color: #444; /* Cinza mais claro */
     cursor: pointer;
 }
 
@@ -138,13 +159,49 @@ table tr:hover {
 }
 
 .actions button.edit {
-    background-color: #ffc107;
+    background-color: #ffc107; /* Amarelo */
     color: white;
 }
 
 .actions button.delete {
-    background-color: #dc3545;
+    background-color: #dc3545; /* Vermelho escuro */
     color: white;
+}
+
+nav {
+    width: 100%;
+    background-color: #ff0000; /* Vermelho */
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+.nav-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background: #b30000; /* Vermelho escuro */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: #ff0000; /* Vermelho */
 }
 
 @media (max-width: 768px) {
@@ -166,4 +223,14 @@ table tr:hover {
         flex-direction: column;
         gap: 5px;
     }
+    #navTitle {
+        text-align: center;
+        font-size: 2.5em;
+        font-weight: bold;
+        color: #ff0000; /* Vermelho bem destacado */
+        margin-bottom: 10px;
+        text-transform: uppercase; /* Opcional: para todas as letras maiúsculas */
+        letter-spacing: 2px; /* Opcional: aumenta o espaçamento entre as letras */
+    }
+
 }

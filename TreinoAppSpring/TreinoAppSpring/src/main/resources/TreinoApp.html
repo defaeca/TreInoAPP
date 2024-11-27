@@ -8,7 +8,15 @@
 </head>
 <body>
 <div id="container">
-    <section id="insertDataSection">
+    <h1 id="navHeader">TreIno (TI)</h1>
+    <nav>
+        <ul>
+            <li><button class="nav-button" data-target="insertDataSection">Inserir Dados</button></li>
+            <li><button class="nav-button" data-target="viewDataSection">Visualizar Dados</button></li>
+        </ul>
+    </nav>
+
+    <section id="insertDataSection" class="screen">
         <h1 id="formHeader">Inserir Dados</h1>
         <form id="insertForm">
             <div class="form-row">
@@ -33,10 +41,10 @@
             </div>
             <button type="submit" id="submitInsert" class="save">Salvar</button>
         </form>
-        <div id="insertSuccess">Dados inseridos/atualizados com sucesso!</div>
+        <div id="insertSuccess" style="display: none;">Dados inseridos/atualizados com sucesso!</div>
     </section>
 
-    <section id="viewDataSection">
+    <section id="viewDataSection" class="screen" style="display: none;">
         <h1>Visualizar Dados</h1>
         <table id="dataTable">
             <thead>
@@ -55,4 +63,6 @@
 
 <script src="script.js"></script>
 </body>
+<div id="background"></div>
+
 </html>

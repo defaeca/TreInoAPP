@@ -130,5 +130,18 @@ function resetForm() {
     document.getElementById('submitInsert').innerText = 'Inserir';
     document.getElementById('formHeader').innerText = 'Inserir Dados';
 }
+document.querySelectorAll('.nav-button').forEach(button => {
+    button.addEventListener('click', () => {
+        const target = button.getAttribute('data-target');
+        showSection(target);
+    });
+});
+
+function showSection(targetId) {
+    document.querySelectorAll('.screen').forEach(section => {
+        section.style.display = section.id === targetId ? 'block' : 'none';
+    });
+}
+
 
 displayData();

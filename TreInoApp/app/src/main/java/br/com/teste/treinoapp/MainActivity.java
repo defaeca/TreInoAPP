@@ -139,4 +139,3 @@ public class MainActivity extends AppCompatActivity {
 //        s.printStackTrace();
 //        Toast.makeText(this, s.getMessage() != null ? s.getMessage() : "Erro geral", Toast.LENGTH_SHORT).show();
 //    }
-}
